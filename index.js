@@ -2,12 +2,15 @@
 const os = require('os');
 const loop_delay_in_seconds = 30;
 
-var Wehaus = require('lib_wehaus').Wehaus;
-var w = new Wehaus({email: 'dev@patagoniclabs.com', token: 'BPw5FzUuVxXRCfPwdhi2'});
+const Wehaus = require('lib_wehaus').Wehaus;
+
+let w = new Wehaus({email: 'dev@patagoniclabs.com', token: 'BPw5FzUuVxXRCfPwdhi2', mac: 'b827eb10295b'});
 
 // w.get_token('dev@patagoniclabs.com','password');
-
+// w.get_mac_address();
 w.get_devices();
+
+let sensor = new SensorDevice(w, 1);
 
 function loop() {
   console.log("in loop");
@@ -22,6 +25,8 @@ function read_values() {
       console.error(`exec error: ${error}`);
       return;
     }
+    
+    sensor.emit('data', stdout.split(',')[0]);
     console.log(stdout);
   });
 }
