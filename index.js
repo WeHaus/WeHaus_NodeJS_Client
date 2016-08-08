@@ -3,10 +3,11 @@ const os = require('os');
 const Wehaus = require('lib_wehaus').Wehaus, SensorDevice = require('lib_wehaus').SensorDevice;
 const exec = require('child_process').exec;
 
-const loop_delay_in_seconds = 30;
+const loop_delay_in_seconds = 10;
 
 // Inicializamos la librería
 let w = new Wehaus({});
+
 
 // Traémos los módulos y dispositivos de nuestra cuenta
 w.get_devices_and_modules();
@@ -72,7 +73,9 @@ function read_values() {
       return;
     }
 
-    temperatura, humedad = stdout.split(',')
+    let datos = stdout.split(',')
+    let temperatura = datos[0].trim();
+    let humedad = datos[1].trim();
 
     // Emito eventos de datos para los sensores
     sensor_temp.emit('data', temperatura);
