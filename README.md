@@ -10,6 +10,10 @@ Install node.js and git
 
     https://github.com/gastonfariasb/WeHaus_NodeJS_Client.git
 
+## Sign Up on WeHaus
+
+[Sign up](https://app.wehaus.com/users/create_new_account)
+
 ## Get the token
 
     node get_config_data.js email password
