@@ -2,7 +2,7 @@
 const os = require('os');
 const Wehaus = require('lib_wehaus').Wehaus, SensorDevice = require('lib_wehaus').SensorDevice;
 const exec = require('child_process').exec;
-const cpu = require('windows-cpu');
+const wmi = require('node-wmi');
 
 const loop_delay_in_seconds = 10;
 
@@ -13,7 +13,7 @@ let w = new Wehaus({});
 // Traémos los módulos y dispositivos de nuestra cuenta
 w.get_devices_and_modules();
 
-let sensor_load, sensor_hum;
+let sensor_load, sensor_temp;
 
 // Cuando ya trajo todo
 w.on('ready',() => {
@@ -48,9 +48,12 @@ w.on('ready',() => {
 
       // Inicializo los sensores
       sensor_load = new SensorDevice(w, 1);
-      sensor_hum = new SensorDevice(w, 2);
+      sensor_temp = new SensorDevice(w, 2);
+	  
+	  // Ejecuto Open Hardware Monitor y espero 10 segundos que se inicie
+	  exec('OpenHardwareMonitor\\OpenHardwareMonitor.exe');
+	  setTimeout(loop, loop_delay_in_seconds * 1000);
 
-      loop();
     });
 
     w.check_device_status();
@@ -68,15 +71,15 @@ function loop() {
 
 function read_values() {
 	// Traigo los datos de los sensores
-	var results;
-	// Get total load on for the CPU
-	cpu.totalLoad(function(error, results) {
+	wmi.Query().namespace('root\\OpenHardwareMonitor').class('Sensor').exec(function(error, sensor) {
 		if(error) {
 			return console.log(error);
 		}
 		// Emito eventos de datos para los sensores
-		sensor_load.emit('data', results[0]);
+		sensor_load.emit('data', sensor[20].Value);
+		console.log(sensor[20].Value);
+		sensor_temp.emit('data', sensor[1].Value);
+		console.log(sensor[1].Value);
 	});
-
-    //sensor_hum.emit('data', humedad);
+	
 }

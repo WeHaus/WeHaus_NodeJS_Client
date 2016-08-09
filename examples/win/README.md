@@ -1,7 +1,13 @@
+# Important
+
+This program must be run with administrator privileges so Open Hardware Monitor works.
+
 # Dependencies
 
-## Windows Management Instrumentation
-https://pypi.python.org/pypi/WMI/
-
-## Python for Windows Extensions
-https://sourceforge.net/projects/pywin32/
+## node-wmi
+Install
+	npm install node-wmi
+	
+##	Open Hardware Monitor 
+Included in OpenHardwareMonitor directory. 
+Downloaded from http://openhardwaremonitor.org/
