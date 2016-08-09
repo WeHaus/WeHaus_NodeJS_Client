@@ -71,15 +71,21 @@ function loop() {
 
 function read_values() {
 	// Traigo los datos de los sensores
-	wmi.Query().namespace('root\\OpenHardwareMonitor').class('Sensor').exec(function(error, sensor) {
+	let CPU_load_name_string = 'CPU Total'; // Cambiar este nombre para que corresponda a la propiedad Name de la instancia correspondiente a la carga total de la CPU
+	let temperature_sensor_name_string = 'Temperature #2'; // Idem anterior, para temperatura. Se sugiere utilizar https://wmie.codeplex.com/ para encontrarlos.
+	wmi.Query().namespace('root\\OpenHardwareMonitor').class('Sensor').props('Value').where('Name="'+CPU_load_name_string+'"').exec(function(error, sensor) {
 		if(error) {
 			return console.log(error);
 		}
 		// Emito eventos de datos para los sensores
-		sensor_load.emit('data', sensor[20].Value);
-		console.log(sensor[20].Value);
-		sensor_temp.emit('data', sensor[1].Value);
-		console.log(sensor[1].Value);
+		sensor_load.emit('data', sensor[0].Value);
+	});
+	wmi.Query().namespace('root\\OpenHardwareMonitor').class('Sensor').props('Value').where('Name="'+temperature_sensor_name_string+'"').exec(function(error, sensor) {
+		if(error) {
+			return console.log(error);
+		}
+		// Emito eventos de datos para los sensores
+		sensor_temp.emit('data', sensor[0].Value);
 	});
 	
 }
