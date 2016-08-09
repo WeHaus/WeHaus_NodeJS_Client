@@ -51,3 +51,72 @@ With an instance of WeHaus and the endpoint number. It has to be created on the 
 
     let sensor_temp = new SensorDevice(w, 1);
 
+# Device types
+
+## SensorDevice
+
+Any device that sends floating point data.
+
+## AlarmDevice (WIP)
+
+Any device that sends logical status data. 
+
+## ActionDevice (WIP)
+
+Device that receives actions.
+
+## ToggableDevice (WIP)
+
+Device that receives actions and has an ON action and OFF action. Extends ActionDevice.
+
+## LevelDevice (WIP)
+
+Device that receives actions with a level from 0 to 255. Extends ToggableDevice, OFF = 0, ON = 255.
+
+## CompositDevice (WIP)
+
+Device that receives actions with an object as parameter. Extends ActionDevice.
+
+
+# WeHaus REST API Methods
+
+If you need something not available contact us at dev@patagoniclabs.com
+
+## get api/v2/check_token
+
+Check if a token is valid.
+
+
+## get api/v2/faye_subscription
+
+Get token for events subscriptions.
+
+
+## get api/v2/modules
+
+Get a list of your registered modules.
+
+
+## post api/v2/create_module
+
+Register a module.
+
+
+## post api/v2/module/:id/create_device
+
+Register a device for a module.
+
+
+## get api/v2/devices
+
+Get a list of your registered devices
+
+## put api/v2/device/:id
+
+Send an action to a device. Only works with actuable devices and not with sensors.
+
+
+## put api/v2/device/:id/data
+
+Send data from a device.
+
