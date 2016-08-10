@@ -1,7 +1,6 @@
 Follow us on the web:
 
-Twitter: https://twitter.com/wehaus
-
+Twitter: https://twitter.com/wehaus  <br>
 Facebook: https://www.facebook.com/Wehaus-480130975380582
 
 
