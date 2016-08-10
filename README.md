@@ -12,26 +12,30 @@ Install node.js and git
 
 ## Sign Up on WeHaus
 
-[Sign up](https://app.wehaus.com/users/create_new_account)
+[Sign up](https://app.wehaus.com/users/create_new_account), confirm your account and complete the user data.
 
 ## Get the token
 
-    node get_config_data.js email password
+    node get_config.js email password
 
 ## Paste the config you get into your script
 
-The index.js file has an example with 2 sensors, you can start by modifying it.
+The examples index.js file has an example with 2 sensors, you can start by modifying it. 
 
-<b>Follow us on the web:</b>
+Use examples/raspi for GNU/Linux and Raspberry Pi and examples/win for Windows.
 
-Twitter: https://twitter.com/wehaus  <br>
-Facebook: https://www.facebook.com/Wehaus-480130975380582
+**Follow us on the web:**
+
+Twitter: <https://twitter.com/wehaus>  <br>
+Facebook: <https://www.facebook.com/Wehaus-480130975380582>
 
 
 
 # Basic Usage of the Library
 
 ## Initialize
+
+With the data you got from the get_config.js script.
 
     let w = new Wehaus({email: 'dev@example.com', token: '12341234', mac: '002200220022'});
 
@@ -56,6 +60,7 @@ Of type SensorDevice with endpoint number 1.
 With an instance of WeHaus and the endpoint number. It has to be created on the API before. You need to create it only once.
 
     let sensor_temp = new SensorDevice(w, 1);
+
 
 # Device types
 
