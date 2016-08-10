@@ -8,7 +8,7 @@ Twitter: <https://twitter.com/wehaus>  <br>
 Facebook: <https://www.facebook.com/Wehaus-480130975380582>
 
 
-# Connect your Sensor to WeHaus
+# Getting Started: Connect your Sensor to WeHaus
 
 ## Dependencies
 
