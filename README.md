@@ -1,6 +1,6 @@
 # Hi!
 
-Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to get up and running your devices or app to interact with our WeHaus Cloud Service.
+Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to get up and running. In case of doubt please email us at doubts@wehaus.com 
 
 **Follow us on the web:**
 
