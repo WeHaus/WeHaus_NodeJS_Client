@@ -1,3 +1,13 @@
+# Hi!
+
+Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to deploy your new IoT Device or App
+
+**Follow us on the web:**
+
+Twitter: <https://twitter.com/wehaus>  <br>
+Facebook: <https://www.facebook.com/Wehaus-480130975380582>
+
+
 # Connect your Sensor to WeHaus
 
 ## Dependencies
@@ -23,13 +33,6 @@ Install node.js and git
 The examples index.js file has an example with 2 sensors, you can start by modifying it. 
 
 Use examples/raspi for GNU/Linux and Raspberry Pi and examples/win for Windows.
-
-**Follow us on the web:**
-
-Twitter: <https://twitter.com/wehaus>  <br>
-Facebook: <https://www.facebook.com/Wehaus-480130975380582>
-
-
 
 # Basic Usage of the Library
 
