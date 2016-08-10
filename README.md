@@ -1,3 +1,9 @@
+Follow us on the web:
+
+Twitter: https://twitter.com/wehaus
+Facebook: https://www.facebook.com/Wehaus-480130975380582
+
+
 # Connect your Sensor to WeHaus
 
 ## Dependencies
