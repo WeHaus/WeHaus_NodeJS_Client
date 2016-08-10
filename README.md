@@ -1,9 +1,3 @@
-Follow us on the web:
-
-Twitter: https://twitter.com/wehaus  <br>
-Facebook: https://www.facebook.com/Wehaus-480130975380582
-
-
 # Connect your Sensor to WeHaus
 
 ## Dependencies
@@ -27,6 +21,12 @@ Install node.js and git
 ## Paste the config you get into your script
 
 The index.js file has an example with 2 sensors, you can start by modifying it.
+
+<b>Follow us on the web:</b>
+
+Twitter: https://twitter.com/wehaus  <br>
+Facebook: https://www.facebook.com/Wehaus-480130975380582
+
 
 
 # Basic Usage of the Library
