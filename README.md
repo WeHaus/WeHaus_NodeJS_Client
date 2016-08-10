@@ -1,6 +1,6 @@
 # Hi!
 
-Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to deploy your new IoT Device or App
+Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to get up and running your devices or app to interact with our WeHaus Cloud Service.
 
 **Follow us on the web:**
 
@@ -18,7 +18,7 @@ Install node.js and git
 
 ## Clone the project
 
-    https://github.com/gastonfariasb/WeHaus_NodeJS_Client.git
+    https://github.com/WeHaus/WeHaus_NodeJS_Client.git
 
 ## Sign Up on WeHaus
 
