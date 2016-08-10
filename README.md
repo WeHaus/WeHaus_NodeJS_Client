@@ -61,6 +61,10 @@ Any device that sends floating point data.
 
 Any device that sends logical status data. 
 
+## GeoSensorDevice (WIP)
+
+Device that sends geo referecial data.
+
 ## ActionDevice (WIP)
 
 Device that receives actions.
@@ -73,7 +77,7 @@ Device that receives actions and has an ON action and OFF action. Extends Action
 
 Device that receives actions with a level from 0 to 255. Extends ToggableDevice, OFF = 0, ON = 255.
 
-## CompositDevice (WIP)
+## ComposietDevice (WIP)
 
 Device that receives actions with an object as parameter. Extends ActionDevice.
 
