@@ -1,0 +1,6 @@
+# Temperatura del CPU en milesimas de grado centigrado
+cat /sys/class/thermal/thermal_zone0/temp 
+
+# Temperatura del GPU en grados centrigrados 
+vcgencmd measure_temp
+
