@@ -138,3 +138,6 @@ Send an action to a device. Only works with actuable devices and not with sensor
 
 Send data from a device.
 
+# License
+
+Apache 2.0 
