@@ -71,27 +71,27 @@ With an instance of WeHaus and the endpoint number. It has to be created on the 
 
 Any device that sends floating point data.
 
-## AlarmDevice (WIP)
+## AlarmDevice
 
 Any device that sends logical status data. 
 
-## GeoSensorDevice (WIP)
+## GeoSensorDevice
 
 Device that sends geo referecial data.
 
-## ActionDevice (WIP)
+## ActionDevice
 
 Device that receives actions.
 
-## ToggableDevice (WIP)
+## ToggableDevice
 
 Device that receives actions and has an ON action and OFF action. Extends ActionDevice.
 
-## LevelDevice (WIP)
+## LevelDevice
 
 Device that receives actions with a level from 0 to 255. Extends ToggableDevice, OFF = 0, ON = 255.
 
-## ComposietDevice (WIP)
+## ComposietDevice
 
 Device that receives actions with an object as parameter. Extends ActionDevice.
 
