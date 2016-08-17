@@ -1,5 +1,7 @@
 # Hi!
 
+![WeHaus Logo](https://app.wehaus.com/uploads/company/logo/1/Logo-WH-nuevo-App.png)
+
 Welcome to our NodeJS and API Client Repo. Here you'll find all the information you need to get up and running. In case of doubt please email us at doubts@wehaus.com 
 
 **Follow us on the web:**
@@ -10,25 +12,25 @@ Facebook: <https://www.facebook.com/Wehaus-480130975380582>
 
 # Getting Started: Connect your Sensor to WeHaus
 
-## Dependencies
+## 1) Dependencies
 
 Install node.js and git
 
     sudo apt-get install git nodejs
 
-## Clone the project
+## 2) Clone the project
 
     https://github.com/WeHaus/WeHaus_NodeJS_Client.git
 
-## Sign Up on WeHaus
+## 3) Sign Up on WeHaus
 
 [Sign up](https://app.wehaus.com/users/create_new_account), confirm your account and complete the user data.
 
-## Get the token
+## 4) Get the token
 
     node get_config.js email password
 
-## Paste the config you get into your script
+## 5) Paste the config you get into your script
 
 The examples index.js file has an example with 2 sensors, you can start by modifying it. 
 
@@ -141,3 +143,5 @@ Send data from a device.
 # License
 
 Apache 2.0 
+
+![Apache](http://www.apache.org/img/asf_logo.png)
