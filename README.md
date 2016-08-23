@@ -93,7 +93,7 @@ Device that receives actions and has an ON action and OFF action. Extends Action
 
 Device that receives actions with a level from 0 to 255. Extends ToggableDevice, OFF = 0, ON = 255.
 
-## ComposietDevice
+## CompositeDevice
 
 Device that receives actions with an object as parameter. Extends ActionDevice.
 
