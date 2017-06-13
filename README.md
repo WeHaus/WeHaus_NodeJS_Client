@@ -133,6 +133,10 @@ Get a list of your registered devices
 
 ## put api/v2/device/:id
 
+Update a device name/image.
+
+## put api/v2/device/:id/action
+
 Send an action to a device. Only works with actuable devices and not with sensors.
 
 
